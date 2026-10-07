@@ -712,7 +712,7 @@ details[open] summary>span {
 
 .skills-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:45px
 }
 
@@ -916,6 +916,63 @@ details[open] summary>span {
   color:var(--blue)
 }
 
+.project-card-featured {
+  grid-column:span 2;
+  display:grid;
+  grid-template-columns:.85fr 1fr;
+}
+.project-card-featured .project-visual {
+  height:100%;
+  min-height:320px;
+  display:flex;
+  align-items:center;
+  border-bottom:0;
+  border-right:1px solid var(--line);
+  padding-top:0;
+}
+.project-card-featured .project-visual img {
+  height:auto;
+  max-height:350px;
+}
+.project-card-featured .contribution p {
+  min-height:0;
+}
+.pathfinder-visual { background:#eaf1ff; }
+.enterprise-visual { background:#eef3fa; }
+.project-highlights {
+  display:grid;
+  grid-template-columns:1fr 1fr 1.2fr;
+  gap:8px;
+  padding-top:18px;
+  margin-top:18px;
+  border-top:1px solid var(--line);
+}
+.project-highlights strong {
+  display:block;
+  font-size:19px;
+  line-height:1.5;
+  color:var(--blue);
+}
+.project-highlights span {
+  font-size:9px;
+  color:var(--muted);
+}
+.project-period,.honor-label {
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  color:var(--muted);
+}
+.honor-label { padding-top:6px; }
+.confidential-note {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:15px 0;
+  border-top:1px solid var(--line);
+  font-size:11px;
+  color:var(--muted);
+}
+.detail-content ul { padding-left:18px; margin:8px 0; }
 .life-interests {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1155,6 +1212,9 @@ details[open] summary>span {
   .project-grid {
     grid-template-columns:1fr
   }
+  .project-card-featured {
+    grid-column:auto;
+  }
   .project-card {
     display:grid;
     grid-template-columns:35% 1fr
@@ -1359,6 +1419,16 @@ details[open] summary>span {
   }
   .project-card {
     display:block
+  }
+  .project-card-featured .project-visual {
+    height:245px;
+    min-height:0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .project-card-featured .project-visual img {
+    height:230px;
+    margin-top:8px;
   }
   .project-visual {
     height:205px;
@@ -1570,6 +1640,9 @@ details[open] summary>span {
   .project-visual {
     display:none
   }
+  .project-card-featured .project-visual {
+    display:none;
+  }
   .project-body {
     padding:15px
   }
@@ -1603,7 +1676,7 @@ details[open] summary>span {
     display:none
   }
   .skills-grid {
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:20px
   }
   .skill-card {

@@ -2,6 +2,8 @@
 
 面向企业面试与教师交流的个人作品主页，展示深圳大学计算机技术硕士研究生背景、AI 与物联网项目、技能方向、竞赛成果和个人兴趣。
 
+当前展示 5 项经历：寻径 PathFinder 教学智能体、保密阶段的企业智能客服、多维增效 AI 笔记、智能共享停车位、AIoT 手部康复手套。PathFinder 采用重点展示卡片，完整技术与项目自测结果可展开查看；企业项目仅公开概况与进行中状态。
+
 - 网站地址：https://mystate1224.github.io/personal-homepage/
 - 仓库地址：https://github.com/mystate1224/personal-homepage
 - 技术：HTML、CSS、原生 JavaScript、原创 SVG 技术示意图。
