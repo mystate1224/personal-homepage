@@ -73,3 +73,14 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
 }
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// 原生 details 关闭时，浏览器会隐藏详情内容；打印前展开，打印后恢复阅读状态。
+let detailsBeforePrint;
+window.addEventListener('beforeprint', () => {
+  detailsBeforePrint = [...document.querySelectorAll('.project-card details')].map(element => ({element, open: element.open}));
+  detailsBeforePrint.forEach(({element}) => { element.open = true; });
+});
+window.addEventListener('afterprint', () => {
+  detailsBeforePrint?.forEach(({element, open}) => { element.open = open; });
+  detailsBeforePrint = undefined;
+});
